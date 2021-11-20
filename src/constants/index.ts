@@ -18,9 +18,9 @@ type ChainTokenList = {
     readonly [chainId in ChainId]: Token[];
 };
 
-export const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2';
+export const WETH_ADDRESS = '0xd00ae08403B9bbb9124bB305C09058E32C39A48c';
 
-export const WETH_ADDRESSES = [WETH_ADDRESS, '0x82af49447d8a07e3bd95bd0d56f35241523fbab1'];
+export const WETH_ADDRESSES = [WETH_ADDRESS];
 
 export const DAI = new Token(
     ChainId.MAINNET,

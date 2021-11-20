@@ -5,6 +5,7 @@ export const healthClient = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
+console.log("xploited react block subgrab", process.env.REACT_APP_BLOCKS_SUBGRAPH_URL)
 export const blockClient = new ApolloClient({
     uri: process.env.REACT_APP_BLOCKS_SUBGRAPH_URL,
     cache: new InMemoryCache(),

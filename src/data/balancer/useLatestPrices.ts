@@ -1,7 +1,7 @@
 import { useGetLatestPricesQuery } from '../../apollo/generated/graphql-codegen-generated';
 
-const WFTM_ADDRESS = '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83';
-const BEETS_ADDRESS = '0xf24bcf4d1e507740041c9cfd2dddb29585adce1e';
+const WFTM_ADDRESS = '0xd00ae08403B9bbb9124bB305C09058E32C39A48c';
+const BEETS_ADDRESS = '0x6451Bf1B139e6FA327d16a38cB2510E9bBD1FedE';
 
 export function useLatestPrices(): { ftm?: number; beets?: number } {
     // eslint-disable-next-line

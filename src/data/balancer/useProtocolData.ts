@@ -33,7 +33,7 @@ export function useBalancerProtocolData(): ProtocolData {
                 variables: {
                     startTimestamp: BALANCER_SUBGRAPH_START_TIMESTAMP,
                     block24: { number: parseInt(block24.number) },
-                    block48: { number: parseInt(block48.number) },
+                    block48: { number: parseInt(block24.number) },
                 },
             });
         }
@@ -88,15 +88,15 @@ export function useBalancerProtocolData(): ProtocolData {
     });
 
     const tvl = parseFloat(balancer.totalLiquidity);
-    const tvl24 = parseFloat(balancer24.totalLiquidity);
+    const tvl24 = parseFloat(balancer.totalLiquidity);
     const volume = parseFloat(balancer.totalSwapVolume);
-    const volume24 = parseFloat(balancer24.totalSwapVolume);
-    const volume48 = parseFloat(balancer48.totalSwapVolume);
+    const volume24 = parseFloat(balancer.totalSwapVolume);
+    const volume48 = parseFloat(balancer.totalSwapVolume);
     const fees = parseFloat(balancer.totalSwapFee);
-    const fees24 = parseFloat(balancer24.totalSwapFee);
-    const fees48 = parseFloat(balancer48.totalSwapFee);
+    const fees24 = parseFloat(balancer.totalSwapFee);
+    const fees48 = parseFloat(balancer.totalSwapFee);
     const swaps = parseFloat(balancer.totalSwapCount);
-    const swaps24 = parseFloat(balancer24.totalSwapCount);
+    const swaps24 = parseFloat(balancer.totalSwapCount);
 
     return {
         volume24: volume - volume24,

@@ -3,7 +3,7 @@
 export const UNSUPPORTED_LIST_URLS: string[] = [];
 export const OPTIMISM_LIST = 'https://static.optimism.io/optimism.tokenlist.json';
 export const ARBITRUM_LIST = 'https://bridge.arbitrum.io/token-list-42161.json';
-export const BEETHOVEN_LIST = 'https://beethoven-assets.s3.eu-central-1.amazonaws.com/beethoven-fantom.tokenlist.json';
+export const BEETHOVEN_LIST = 'https://raw.githubusercontent.com/l0rdicon/offical-token-lists/main/tokens.fuji.json';
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [

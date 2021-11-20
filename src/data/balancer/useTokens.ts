@@ -42,13 +42,14 @@ export function useBalancerTokens(): TokenData[] {
     const [block24, block48, blockWeek] = blocks ?? [];
     const [getTokenData, { data }] = useGetTokenDataLazyQuery();
 
+    console.log('xploited use balancer tokens', block24, block24, blockWeek)
     useEffect(() => {
         if (block24) {
             getTokenData({
                 variables: {
                     block24: { number: parseInt(block24.number) },
                     //block48: { number: parseInt(block48.number) },
-                    blockWeek: { number: parseInt(blockWeek.number) },
+                    blockWeek: { number: parseInt(block24.number) },
                 },
             });
         }

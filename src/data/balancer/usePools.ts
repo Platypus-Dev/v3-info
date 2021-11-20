@@ -40,8 +40,8 @@ export function useBalancerPools(): PoolData[] {
             getPoolData({
                 variables: {
                     block24: { number: parseInt(block24.number) },
-                    block48: { number: parseInt(block48.number) },
-                    blockWeek: { number: parseInt(blockWeek.number) },
+                    block48: { number: parseInt(block24.number) },
+                    blockWeek: { number: parseInt(block24.number) },
                 },
             });
         }
